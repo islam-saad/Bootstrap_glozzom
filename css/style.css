@@ -111,3 +111,18 @@
             margin: 0 1rem;
         }
     }
+    
+    @media (max-width: 768px) {
+        .mbs-10 {
+            margin-bottom: 1rem;
+        }
+        .form-group {
+            width: 100%;
+        }
+        .form-control {
+            margin-bottom: 1rem;
+        }
+        #blog {
+            margin: 0 1rem;
+        }
+    }
