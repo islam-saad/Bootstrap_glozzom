@@ -157,7 +157,7 @@
                 <div class="col">
                     <div class="container text-white text-center  pt-5">
                         <!-- Button trigger modal -->
-                        <a class="video text-white" data-video="" data-toggle="modal" data-target="#exampleModal">
+                        <a href="#" class="video text-white" data-video="" data-toggle="modal" data-target="#exampleModal">
                             <i class="fas fa-play fa-4x"></i>
                         </a>
                         <h2 class="mt-2">See What We Do</h2>
@@ -236,7 +236,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe src="https://www.youtube.com/embed/HnwsG9a5riA" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Wjrrgrvq1ew" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -255,6 +255,15 @@
         $(document).on('click', '[data-toggle="lightbox"]', function(event) {
             event.preventDefault();
             $(this).ekkoLightbox();
+        });
+        $('.modal').on('hidden.bs.modal', function() {
+            var $this = $(this);
+            //get iframe on click
+            var vidsrc_frame = $this.find("iframe");
+            var vidsrc_src = vidsrc_frame.attr('src');
+            console.log(`videosrc=` + vidsrc_src)
+            vidsrc_frame.attr('src', '');
+            vidsrc_frame.attr('src', vidsrc_src);
         });
     </script>
 </body>
